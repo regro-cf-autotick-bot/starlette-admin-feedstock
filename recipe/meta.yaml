@@ -28,6 +28,13 @@ requirements:
     # These dependencies are outside contrib, as helpers, so adding them
     - markupsafe
     - pydantic
+    # These dependencies are optional, inside the contrib module
+    # - anyio
+    # - bson
+    # - mongoengine
+    # - pymongo
+    # - sqlmodel
+    # - sqlalchemy
 
 test:
   imports:
