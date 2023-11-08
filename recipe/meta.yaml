@@ -25,6 +25,9 @@ requirements:
     - python >=3.7
     - python-multipart
     - starlette
+    # These dependencies are outside contrib, as helpers, so adding them
+    - markupsafe
+    - pydantic
 
 test:
   imports:
