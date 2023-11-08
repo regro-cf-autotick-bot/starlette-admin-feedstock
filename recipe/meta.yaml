@@ -1,5 +1,5 @@
 {% set name = "starlette-admin" %}
-{% set version = "0.11.2" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/starlette_admin-{{ version }}.tar.gz
-  sha256: c0cc03fcf8cc65810f1eb3045d764beab44ea4e40c2327eafeb3a7ee20714825
+  sha256: c1a295b0e7b1d828f6d131c1b1762df96b74d58ecbc0ac03f2ff720296dfbe00
 
 build:
   noarch: python
@@ -20,11 +20,21 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - babel >=2.12.1
+    - babel >=2.13.0
     - jinja2 >=3,<4
     - python >=3.7
     - python-multipart
     - starlette
+    # These dependencies are outside contrib, as helpers, so adding them
+    - markupsafe
+    - pydantic
+    # These dependencies are optional, inside the contrib module
+    # - anyio
+    # - bson
+    # - mongoengine
+    # - pymongo
+    # - sqlmodel
+    # - sqlalchemy
 
 test:
   imports:
@@ -36,7 +46,7 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/starlette-admin/
+  home: https://pypi.org/project/starlette-admin
   summary: Fast, beautiful and extensible administrative interface framework for Starlette/FastApi applications
   license: MIT
   license_file: LICENSE
