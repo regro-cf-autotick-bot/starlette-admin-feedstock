@@ -1,5 +1,5 @@
 {% set name = "starlette-admin" %}
-{% set version = "0.13.1" %}
+{% set version = "0.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/starlette_admin-{{ version }}.tar.gz
-  sha256: 7878919794951eb70f73314f400c8f18a42b096abd990b157cd5d981a84de2be
+  sha256: 60b517ca9f73ac7eb645f354138a0126dbb84d7bdde53db23deaf38477100dff
 
 build:
   noarch: python
